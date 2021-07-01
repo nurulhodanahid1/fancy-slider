@@ -30,9 +30,11 @@ const showImages = (images) => {
   spinner(false);
 
   if(images.length === 0){
+    errorArea.style.display = " ";
     let p = document.createElement('p');
     p.innerText = "Wrong image categories name! Enter the valid images categories name!!";
     errorArea.appendChild(p);
+    errorArea.style.display = "block";
   }
   else{
     images.forEach(image => {
